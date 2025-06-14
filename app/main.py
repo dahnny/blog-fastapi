@@ -15,6 +15,10 @@ from .database import engine
 
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"message": "Hello from inside the app folder!"}
+
 origins = [
     "*",
 ]
