@@ -35,20 +35,6 @@ app.include_router(vote.router)
 models.Base.metadata.create_all(bind=engine)
 
         
-while True:
-    try:
-        conn = psycopg2.connect(
-            host='localhost',
-            dbname='postgres',
-            user='postgres',
-            password='jes0sluv',
-            cursor_factory=RealDictCursor)
-        cursor = conn.cursor()
-        break
-    except Exception as e:
-        print("Connection to database failed")
-        print(e)
-        time.sleep(2)
-        
+
 
 
